@@ -1,15 +1,13 @@
 // Mouse Distance
 // Derinsola Bolaji
 // September 20, 2023
-//
 // arrays, mains, functions, scroll wheel, colors
 
 
 // Global Variables
 let colorArray = [];
 let colorIndex = 0;
-let a = Math.abs(x1-x2);
-let b = Math.abs(y1-y2);
+
 
 function createColors(){
   colorArray.push(color("red"));
@@ -17,7 +15,7 @@ function createColors(){
   colorArray.push("midnightblue");
 }
 
-function mouseWheel(){
+function mouseWheel(event){
   print(event.delta);
   if(event.delta < 0){
     colorIndex += 1;
@@ -26,6 +24,13 @@ function mouseWheel(){
     }
   }
 }
+
+function mouseDistance(x1,y1,x2,y2){
+  let a = Math.abs(x1-x2);
+  let b = Math.abs(y1-y2);
+  let c = Math.sqrt(a*a,b*b);
+}
+
 
 function drawModes(){
   fill(colorArray[colorIndex]);

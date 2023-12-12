@@ -1,1 +1,0 @@
-# DerinsolaB.github.io
